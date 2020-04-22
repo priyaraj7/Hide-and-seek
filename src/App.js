@@ -6,8 +6,8 @@ import SquareCardList from './components/CardList';
 function App() {
   return (
     <React.Fragment>
-      <div className="container">
-        <Header />
+      <Header />
+      <div className="container" id="main">
         <SquareCardList />
       </div>
     </React.Fragment>
