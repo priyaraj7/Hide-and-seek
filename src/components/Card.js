@@ -1,61 +1,58 @@
 import React from "react";
-import giraffe from "../assets/giraffe.jpg";
+import PropTypes from "prop-types";
 
-function Card() {
+function Card(props) {
   return (
     <React.Fragment>
       <div className="card-wrapper">
-        <img src={giraffe} alt="" />
+        <img src={props.front} alt="" className="card-image" />
       </div>
     </React.Fragment>
   );
 }
 
+Card.propTypes = {
+  names: PropTypes.string,
+  front: PropTypes.string,
+  back: PropTypes.string,
+};
+
 export default Card;
 
+// export default Card;
+
 // import React from "react";
-// import Item from "./Item";
-// import image1 from "../assets/1.jpg";
-// import image2 from "../assets/2.jpg";
-// import image3 from "../assets/3.jpg";
-// import { CardDeck } from "react-bootstrap";
+// import PropTypes from "prop-types";
 
-// const masterTicketList = [
-//   {
-//     names: "Giraffe",
-//     location: image1,
-//     issue: "Unique activities we can do together, led by a world of hosts",
-//   },
-//   {
-//     names: "Monthly stays",
-//     location: image2,
-//     issue: "Make Airbnb your home, for stays of a month or longer.",
-//   },
-//   {
-//     names: "Frontline stays",
-//     location: image3,
-//     issue: "Find or provide accomadation for COVID-19 responders.",
-//   },
-// ];
+// import React from "react";
+// import PropTypes from "prop-types";
+// // import Image1 from '../assets/1.jpg';
+// import { Card, Button } from "react-bootstrap";
 
-// function ItemList() {
+// function Item(props) {
 //   return (
-//     <React.Fragment>
-//       <div padding="10px" margin="10px">
-//         <hr />
-//         <CardDeck>
-//           {masterTicketList.map((ticket, index) => (
-//             <Item
-//               names={ticket.names}
-//               location={ticket.location}
-//               issue={ticket.issue}
-//               key={index}
-//             />
-//           ))}
-//         </CardDeck>
-//       </div>
-//     </React.Fragment>
+//     <Card
+//       style={{
+//         width: "18rem",
+//         overflow: "hidden",
+//         borderRadius: "15px",
+//         marginTop: "15px",
+//         marginBottom: "15px",
+//       }}
+//     >
+//       <Card.Img variant="top" src={props.location} />
+//       <Card.Body>
+//         <Card.Title>{props.names}</Card.Title>
+//         <Card.Text>{props.issue}</Card.Text>
+//       </Card.Body>
+//     </Card>
 //   );
 // }
 
-// export default ItemList;
+// Item.propTypes = {
+//   names: PropTypes.string,
+//   location: PropTypes.string,
+//   issue: PropTypes.string,
+// };
+
+// export default Item;
