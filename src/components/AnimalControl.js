@@ -1,5 +1,5 @@
 import React from "react";
-import TestCard from "./TestCard";
+import Card from "./Card";
 import giraffe from "../assets/giraffe.jpg";
 import giraffeBack from "../assets/giraffe-back.jpg";
 
@@ -21,11 +21,11 @@ class TestGiraffeControl extends React.Component {
     let currentlyVisibleState = null;
     if (this.state.giraffeVisible) {
       currentlyVisibleState = (
-        <TestCard imageName={giraffe} toggle={this.toggleImage} />
+        <Card imageName={giraffe} toggle={this.toggleImage} />
       );
     } else {
       currentlyVisibleState = (
-        <TestCard imageName={giraffeBack} toggle={this.toggleImage} />
+        <Card imageName={giraffeBack} toggle={this.toggleImage} />
       );
     }
     return (
