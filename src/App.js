@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./UI/Header";
 import "./App.css";
-import AnimalControl from "./components/AnimalControl";
+import SquareCardList from './components/CardList';
 
 function App() {
   return (
     <React.Fragment>
       <div className="container">
         <Header />
-        <AnimalControl />
+        <SquareCardList />
       </div>
     </React.Fragment>
   );

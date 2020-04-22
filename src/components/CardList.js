@@ -1,38 +1,35 @@
 import React from "react";
-import Card from "./Card";
-// import { CardDeck } from "react-bootstrap";
-import giraffe from "../assets/giraffe.jpg";
-import giraffeBack from "../assets/giraffe-back.jpg";
+import SquareCard from "./SquareCard";
+import alligator from './../assets/alligator.png';
+import monkey from './../assets/monkey.png';
+import pandabear from './../assets/pandabear.png';
 
-const masterTicketList = [
+const animalObjects = [
   {
-    names: "Giraffe",
-    front: giraffe,
-    back: giraffeBack,
+    imageName: alligator,
+    text: "Alligator"
   },
   {
-    names: "Frog",
-    front: "not",
-    back: "yet",
+    imageName: monkey,
+    text: "Monkey"
   },
+  {
+    imageName: pandabear,
+    text: "Panda Bear"
+  }
 ];
 
-function CardList() {
+function SquareCardList() {
   return (
     <React.Fragment>
-      <div padding="10px" margin="10px">
-        <hr />
-        {masterTicketList.map((ticket, index) => (
-          <Card
-            names={ticket.names}
-            front={ticket.front}
-            back={ticket.back}
-            key={index}
-          />
-        ))}
-      </div>
+      {animalObjects.map((animal, index) => (
+        <SquareCard 
+          imageName={animal.imageName}
+          text={animal.text}
+          key={index} />
+      ))}
     </React.Fragment>
   );
 }
 
-export default CardList;
+export default SquareCardList;
